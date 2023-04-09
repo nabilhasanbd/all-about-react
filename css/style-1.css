@@ -1,0 +1,42 @@
+p {
+  color: blue;
+}
+h4.fun {
+  background-color: aliceblue;
+}
+h3 {
+  color: blueviolet;
+  height: 90px;
+  width: 50%;
+  /* background-color: aqua; */
+}
+img {
+  height: 50%;
+  width: 50%;
+}
+.demo {
+  color: darkblue;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+span {
+  color: red;
+}
+.blog {
+  /* background-color: aqua; */
+  border: 3px solid purple;
+  border-radius: 5px;
+  /* margin: 10px; */
+  /* margin: 20px 40px; */
+  /* 1st er ta uporer and porer ta pasher */
+  margin: 12px 12px 12px 12px;
+  /* clock wise value  */
+  padding: 25px;
+  width: 28%;
+  float: left;
+}
+
+h4 {
+  text-align: center;
+}
