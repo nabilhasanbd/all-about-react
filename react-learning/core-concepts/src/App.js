@@ -28,9 +28,10 @@ function App() {
         </p>
         <h4>This is {2000 + 3}</h4>
         <div style={personContainerStyle}>
-          <Person name="Nabil"></Person>
+          <Person name="Nabil" job="Software Engineer"></Person>
           <Person></Person>
         </div>
+        <Employee></Employee>
       </header>
     </div>
   );
@@ -47,7 +48,23 @@ function Person(props) {
     // <div style={{ border: "2px solid yellow", margin: "5px", padding: "5px" }}>
     <div style={personStyle}>
       <p>Hello {props.name} </p>
+      <p>Job : {props.job}</p>
       <p>{props.name} is awesome !!</p>
+    </div>
+  );
+}
+
+function Employee(props) {
+  var personStyle = {
+    border: "2px solid grey",
+    margin: "5px",
+    padding: "5px",
+    backgroundColor: "black",
+  };
+  return (
+    <div style={personStyle}>
+      <p>Hello {props.name} </p>
+      <p>Job : {props.job}</p>
     </div>
   );
 }
