@@ -38,13 +38,14 @@ function App() {
 
 // it s a simple component
 function Person() {
-  // var personStyle = {
-  //   border: "2px solid white",
-  //   margin: "5px",
-  //   padding: "5px",
-  // };
+  var personStyle = {
+    border: "2px solid white",
+    margin: "5px",
+    padding: "5px",
+  };
   return (
-    <div style={{ border: "2px solid yellow", margin: "5px", padding: "5px" }}>
+    // <div style={{ border: "2px solid yellow", margin: "5px", padding: "5px" }}>
+    <div style={personStyle}>
       <p p> Hello</p>
       <p>How are yoy</p>
     </div>
