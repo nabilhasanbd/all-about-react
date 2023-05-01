@@ -28,7 +28,7 @@ function App() {
         </p>
         <h4>This is {2000 + 3}</h4>
         <div style={personContainerStyle}>
-          <Person></Person>
+          <Person name="Nabil"></Person>
           <Person></Person>
         </div>
       </header>
@@ -37,7 +37,7 @@ function App() {
 }
 
 // it s a simple component
-function Person() {
+function Person(props) {
   var personStyle = {
     border: "2px solid white",
     margin: "5px",
@@ -46,8 +46,8 @@ function Person() {
   return (
     // <div style={{ border: "2px solid yellow", margin: "5px", padding: "5px" }}>
     <div style={personStyle}>
-      <p p> Hello</p>
-      <p>How are yoy</p>
+      <p>Hello {props.name} </p>
+      <p>{props.name} is awesome !!</p>
     </div>
   );
 }
