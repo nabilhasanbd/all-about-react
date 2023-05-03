@@ -16,10 +16,20 @@ function App() {
     flexDirection: "row",
   };
 
+  const products = [
+    {
+      name: "X-Box 980",
+      pricr: "$679.75",
+    },
+    {
+      name: "GT-600",
+      price: "$1000",
+    },
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p className="" style={style}>
           Hello {world}
         </p>
@@ -32,6 +42,7 @@ function App() {
           <Person></Person>
         </div>
         <Employee></Employee>
+        <Product></Product>
       </header>
     </div>
   );
@@ -50,6 +61,24 @@ function Person(props) {
       <p>Hello {props.name} </p>
       <p>Job : {props.job}</p>
       <p>{props.name} is awesome !!</p>
+    </div>
+  );
+}
+
+function Product() {
+  const productStyle = {
+    border: "5px solid grey",
+    borderRadius: "5px",
+    backgroundColor: "grey",
+    height: "200px",
+    weight: "200px",
+    float: "left",
+  };
+  return (
+    <div style={productStyle}>
+      <h5>Name: X-Box 550</h5>
+      <h5>Price : $609.75</h5>
+      <button>Buy now</button>
     </div>
   );
 }
