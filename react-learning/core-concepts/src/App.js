@@ -17,14 +17,8 @@ function App() {
   };
 
   const products = [
-    {
-      name: "X-Box 980",
-      pricr: "$679.75",
-    },
-    {
-      name: "GT-600",
-      price: "$1000",
-    },
+    { name: "X-Box 980", price: "$679.75" },
+    { name: "GT-600", price: "$1000" },
   ];
 
   return (
@@ -42,7 +36,7 @@ function App() {
           <Person></Person>
         </div>
         <Employee></Employee>
-        <Product></Product>
+        <Product name={products[0].name} price={products[0].price}></Product>
       </header>
     </div>
   );
@@ -65,7 +59,7 @@ function Person(props) {
   );
 }
 
-function Product() {
+function Product(props) {
   const productStyle = {
     border: "5px solid grey",
     borderRadius: "5px",
@@ -76,8 +70,8 @@ function Product() {
   };
   return (
     <div style={productStyle}>
-      <h5>Name: X-Box 550</h5>
-      <h5>Price : $609.75</h5>
+      <h5>Name:{props.name}</h5>
+      <h5>Price:{props.price}</h5>
       <button>Buy now</button>
     </div>
   );
