@@ -37,6 +37,7 @@ function App() {
         </div>
         <Employee></Employee>
         <Product name={products[0].name} price={products[0].price}></Product>
+        {/* <Product product={products[1]}></Product> */}
       </header>
     </div>
   );
