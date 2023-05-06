@@ -10,7 +10,7 @@ function App() {
   var style = {
     color: "aqua",
     backgroundColor: "grey",
-  };
+  }; 
   var personContainerStyle = {
     display: "flex",
     flexDirection: "row",
@@ -20,6 +20,8 @@ function App() {
     { name: "X-Box 980", price: "$679.75" },
     { name: "GT-600", price: "$1000" },
   ];
+
+  const kings = ["Saladin", "Humayun", "Babar", "Suleyman", "Fatih"];
 
   return (
     <div className="App">
@@ -31,6 +33,13 @@ function App() {
           I am {info.name} and my age is {info.age}
         </p>
         <h4>This is {2000 + 3}</h4>
+
+        <ul>
+          {kings.map((king) => (
+            <li>{king}</li>
+          ))}
+        </ul>
+
         <div style={personContainerStyle}>
           <Person name="Nabil" job="Software Engineer"></Person>
           <Person></Person>
