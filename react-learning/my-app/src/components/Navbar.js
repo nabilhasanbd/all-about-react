@@ -1,6 +1,7 @@
 // typing short-cut for "ract function component" => rfc
-
 import React from "react";
+// short cut -> impt
+import PropTypes from "prop-types";
 
 export default function Navbar(props) {
   return (
@@ -24,7 +25,7 @@ export default function Navbar(props) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Home
+                {props.aboutText}
               </a>
             </li>
             <li className="nav-item">
@@ -49,3 +50,13 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  aboutText: PropTypes.string,
+};
+
+Navbar.defaultProps = {
+  title: "Set text here",
+  aboutText: "Set about text here",
+};
