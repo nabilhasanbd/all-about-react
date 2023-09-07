@@ -12,6 +12,7 @@ import Testimonial from "./components/tesimonial/Testimonial";
 function App() {
   return (
     <>
+    <div className="container bg-bodyColor mx-auto px-20">
       <div className="w-full h-auto bg-bodyColor text-lightText px-4">
           <Navbar />
         <div className="max-w-screen-xl mx-auto">
@@ -25,6 +26,8 @@ function App() {
           <FooterBottom />
         </div>
       </div>
+    </div>
+    
     </>
     
   );
