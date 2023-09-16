@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './components.css'; // Make sure the path to your CSS file is correct
+// import './components.css'; // Make sure the path to your CSS file is correct
 
 export default function TextFormBig(prop) {
     const textToUpper = () => {
