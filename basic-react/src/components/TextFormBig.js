@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from "react";
 
 
 export default function TextFormBig(prop) {
+    const [text, setText] = useState("enter text");
     return (
-        <div>
-            <h3>{prop.title}</h3>
+        <div className='container'>
+            <h3>{prop.title} - {text}</h3>
             <div className="mb-3">
-            <textarea className="form-control" id="myTextBox" rows="6"></textarea>
+            <textarea className="form-control" value={text} id="myTextBox" rows="6"></textarea>
             </div>
             <button className="btn btn-primary">Chnage to uppercase</button>
         </div>
