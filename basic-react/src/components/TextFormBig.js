@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './components.css'; // Make sure the path to your CSS file is correct
 
 export default function TextFormBig(prop) {
     const textToUpper = () => {
@@ -11,7 +12,6 @@ export default function TextFormBig(prop) {
     }
 
     const clearText = () => {
-        // Clear the text
         setText("");
     }
 
@@ -23,8 +23,10 @@ export default function TextFormBig(prop) {
             <div className="mb-3">
                 <textarea className="form-control" value={text} onChange={textOnChange} id="myTextBox" rows="6"></textarea>
             </div>
-            <button className="btn btn-primary" onClick={textToUpper}>Change to uppercase</button>
-            <button className="btn btn-danger ml-2" onClick={clearText}>Clear Text</button>
+            <div className="button-container">
+                <button className="btn btn-primary" onClick={textToUpper}>Change to uppercase</button>
+                <button className="btn btn-danger mx-2" onClick={clearText}>Clear Text</button>
+            </div>
         </div>
     )
 }
