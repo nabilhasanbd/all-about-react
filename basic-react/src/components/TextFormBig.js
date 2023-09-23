@@ -18,6 +18,8 @@ export default function TextFormBig(prop) {
     const [text, setText] = useState("enter text");
 
     return (
+        <>
+        
         <div className='container'>
             <h3>{prop.title}</h3>
             <div className="mb-3">
@@ -28,5 +30,10 @@ export default function TextFormBig(prop) {
                 <button className="btn btn-danger mx-2" onClick={clearText}>Clear Text</button>
             </div>
         </div>
+        <div className="container my-5">
+        <h3>Text Summary</h3>
+        <p>{text.split(" ").length} worrd and {text.length} characters</p>
+        </div>
+        </>
     )
 }
