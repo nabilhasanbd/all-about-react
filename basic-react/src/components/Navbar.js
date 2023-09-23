@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Navbar(props) {
   return (
     <>
-        <div className='container'>
+      <div className='container'>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">{props.title}</a>
@@ -23,7 +23,7 @@ export default function Navbar(props) {
             </div>
           </div>
         </nav>
-        </div>
+      </div>
     </>
   )
 }
@@ -31,10 +31,10 @@ export default function Navbar(props) {
 
 // this is validation for react 
 Navbar.propTypes = {
-    title : PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 }
 
 // if the value is not set
 Navbar.defaultProps = {
-    title : "Set title here"
+  title: "Set title here"
 }

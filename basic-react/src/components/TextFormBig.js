@@ -19,24 +19,23 @@ export default function TextFormBig(prop) {
 
     return (
         <>
-        
-        <div className='container'>
-            <h3>{prop.title}</h3>
-            <div className="mb-3">
-                <textarea className="form-control" value={text} onChange={textOnChange} id="myTextBox" rows="6"></textarea>
+            <div className='container'>
+                <h3>{prop.title}</h3>
+                <div className="mb-3">
+                    <textarea className="form-control" value={text} onChange={textOnChange} id="myTextBox" rows="6"></textarea>
+                </div>
+                <div className="button-container">
+                    <button className="btn btn-primary" onClick={textToUpper}>Change to uppercase</button>
+                    <button className="btn btn-danger mx-2" onClick={clearText}>Clear Text</button>
+                </div>
             </div>
-            <div className="button-container">
-                <button className="btn btn-primary" onClick={textToUpper}>Change to uppercase</button>
-                <button className="btn btn-danger mx-2" onClick={clearText}>Clear Text</button>
+            <div className="container my-5">
+                <h3>Text Summary</h3>
+                <p>{text.split(" ").length} worrd and {text.length} characters</p>
+                <p>{0.008 * text.split(" ").length} minutes read</p>
+                <h3>Preview</h3>
+                <p>{text}</p>
             </div>
-        </div>
-        <div className="container my-5">
-        <h3>Text Summary</h3>
-        <p>{text.split(" ").length} worrd and {text.length} characters</p>
-        <p>{0.008*text.split(" ").length} minutes read</p>
-        <h3>Preview</h3>
-        <p>{text}</p>
-        </div>
         </>
     )
 }
