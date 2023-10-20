@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar title="TetxUtils" /> <br />
-      {/* <TextFormBig title="Enter text" /> */}
+      <TextFormBig title="Enter text" />
       <About/>
     </>
   );
