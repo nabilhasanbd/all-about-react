@@ -45,8 +45,8 @@ export default function TextFormBig(props) {
                 <h2 className='mb-4'>{props.title}</h2>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{
-                        backgroundColor: props.mode === 'dark' ? '#042743' : 'white',
-                        color: props.mode === 'dark' ? 'white' : '#042743'
+                        backgroundColor: props.mode === 'dark' ? 'grey' : 'white',
+                        color: props.mode === 'dark' ? 'white' : 'grey'
                     }} id="myTextBox" rows="6"></textarea>
                 </div>
                 <button  className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
