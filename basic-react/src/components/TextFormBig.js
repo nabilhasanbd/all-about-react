@@ -31,7 +31,7 @@ export default function TextFormBig(prop) {
             </div>
             <div className="container my-5">
                 <h3>Text Summary</h3>
-                <p>{text.split(" ").length} worrd and {text.length} characters</p>
+                <p>{text.split(" ").length} word and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} minutes read</p>
                 <h3>Preview</h3>
                 <p>{text}</p>

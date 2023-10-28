@@ -19,7 +19,7 @@ function App() {
     <>
       <Navbar title="TetxUtils" mode={mode} toggleMode={toggleMode} /> <br />
       <TextFormBig title="Enter text" />
-      <About />
+      {/* <About /> */}
     </>
   );
 }
