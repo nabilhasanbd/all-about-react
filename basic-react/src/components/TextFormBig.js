@@ -41,12 +41,12 @@ export default function TextFormBig(props) {
 
     return (
         <>
-            <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+            <div className='container' style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h2 className='mb-4'>{props.title}</h2>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{
-                        backgroundColor: props.mode === 'dark' ? 'grey' : 'white',
-                        color: props.mode === 'dark' ? 'white' : 'black'
+                        backgroundColor: props.mode === 'dark' ? '#042743' : 'white',
+                        color: props.mode === 'dark' ? 'white' : '#042743'
                     }} id="myTextBox" rows="6"></textarea>
                 </div>
                 <button  className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
@@ -56,7 +56,7 @@ export default function TextFormBig(props) {
                 <button  className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
             </div >
 
-            <div className="container my-5" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+            <div className="container my-5" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h3>Text Summary</h3>
                 <p>{text.split(" ").length} word and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} minutes read</p>
