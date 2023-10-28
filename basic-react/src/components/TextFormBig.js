@@ -1,35 +1,62 @@
 import React, { useState } from "react";
 // import './components.css'; // Make sure the path to your CSS file is correct
 
-export default function TextFormBig(prop) {
-    const textToUpper = () => {
+export default function TextFormBig(props) {
+    const handleUpClick = () => {
         let newText = text.toUpperCase();
+        setText(newText)
+        // props.showAlert("Converted to uppercase!", "success");
+    }
+
+    const handleLoClick = () => {
+        let newText = text.toLowerCase();
+        setText(newText)
+        // props.showAlert("Converted to lowercase!", "success");
+    }
+
+    const handleClearClick = () => {
+        let newText = '';
         setText(newText);
+        // props.showAlert("Text Cleared!", "success");
     }
 
-    const textOnChange = (event) => {
-        setText(event.target.value);
+    const handleOnChange = (event) => {
+        setText(event.target.value)
     }
 
-    const clearText = () => {
-        setText("");
+    // Credits: A
+    const handleCopy = () => {
+        navigator.clipboard.writeText(text);
+        // props.showAlert("Copied to Clipboard!", "success");
+    }
+
+    // Credits: Coding Wala
+    const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+        // props.showAlert("Extra spaces removed!", "success");
     }
 
     const [text, setText] = useState("enter text");
 
     return (
         <>
-            <div className='container'>
-                <h3>{prop.title}</h3>
+            <div className='container' style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+                <h2 className='mb-4'>{props.title}</h2>
                 <div className="mb-3">
-                    <textarea className="form-control" value={text} onChange={textOnChange} id="myTextBox" rows="6"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{
+                        backgroundColor: props.mode === 'dark' ? 'grey' : 'white',
+                        color: props.mode === 'dark' ? 'white' : 'black'
+                    }} id="myTextBox" rows="6"></textarea>
                 </div>
-                <div className="button-container">
-                    <button className="btn btn-primary" onClick={textToUpper}>Change to uppercase</button>
-                    <button className="btn btn-danger mx-2" onClick={clearText}>Clear Text</button>
-                </div>
-            </div>
-            <div className="container my-5">
+                <button  className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
+                <button  className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear Text</button>
+                <button  className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+                <button  className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+            </div >
+
+            <div className="container my-5" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <h3>Text Summary</h3>
                 <p>{text.split(" ").length} word and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} minutes read</p>

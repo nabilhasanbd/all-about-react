@@ -10,15 +10,17 @@ function App() {
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark')
+      document.body.style.backgroundColor = 'grey';
     } else {
       setMode('light')
+      document.body.style.backgroundColor = 'white';
     }
   }
 
   return (
     <>
       <Navbar title="TetxUtils" mode={mode} toggleMode={toggleMode} /> <br />
-      <TextFormBig title="Enter text" />
+      <TextFormBig title="Enter text" mode={mode} />
       {/* <About /> */}
     </>
   );
