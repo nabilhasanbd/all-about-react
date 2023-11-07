@@ -16,7 +16,7 @@ function App() {
       })
       setTimeout(() => {
           setAlert(null);
-      }, 1500);
+      }, 2000);
   }
 
   const toggleMode = () => {
@@ -35,7 +35,7 @@ function App() {
     <>
       <Navbar title="TetxUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
-      <TextFormBig title="Enter text" mode={mode} />
+      <TextFormBig title="Enter text" mode={mode} showAlert={showAlert} />
       {/* <About /> */}
     </>
   );
