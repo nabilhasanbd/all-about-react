@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Navbar title="TetxUtils" mode={mode} toggleMode={toggleMode} /> <br />
+      <Navbar title="TetxUtils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       <TextFormBig title="Enter text" mode={mode} />
       {/* <About /> */}

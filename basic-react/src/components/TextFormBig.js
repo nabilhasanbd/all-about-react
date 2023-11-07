@@ -41,7 +41,7 @@ export default function TextFormBig(props) {
 
     return (
         <>
-            <div className='container' style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
+            <div className='container my-3' style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
                 <h2 className='mb-4'>{props.title}</h2>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{
